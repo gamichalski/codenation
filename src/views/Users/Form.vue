@@ -95,12 +95,7 @@ export default {
     async submit(form) {
       if (!this.$v.form.$invalid) {
         form.id = Math.round(Math.random() * 100);
-        try {
-          await axios.post("http://172.28.8.98:3000/animals", form);
-          console.log("Inserido com sucesso");
-        } catch {
-          console.error("Não inserido");
-        }
+        await axios.post("http://172.28.8.98:3000/animals", form);
       }
     }
   }
