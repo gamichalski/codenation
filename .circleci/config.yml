@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           name: install-dependencies
-          command: npm install
+          command: npm install --no-optional
       - run:
           name: lint
           command: npm run lint
